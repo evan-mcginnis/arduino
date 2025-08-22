@@ -1,0 +1,9 @@
+Transmit the readings from a moisture sensor.
+
+There are 3 components required: Arduino Nano, RYLR998 Radio, Flying Fish Moisture sensor
+
+Wire them up like is shown in the wiring diagram.
+
+The readings are sent to address 1 in network 18 by default.
+
+
