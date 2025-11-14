@@ -1,10 +1,18 @@
+//
+// Moisture sensor
+// Evan McGinnis
+// 8 Aug 2025
+//
 #ifndef SOIL_h
 #define SOIL_h
+
+#include "Arduino.h"
 
 class MoistureSensor {
   public:
     MoistureSensor(int pin);
 
+    void begin();
     void read();
     float current();
   
@@ -14,6 +22,6 @@ class MoistureSensor {
     float lastReading;
 
     float readAveraged(int pin);
-}
+};
 
 #endif

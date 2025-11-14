@@ -184,7 +184,7 @@ RYLR988::SERIAL_ERR RYLR988::sendMsg(const char * msg)
 {
     SERIAL_ERR err = ERR_NO_ERROR;
     size_t written = 0;
-    char rylr988Message[80];
+    char rylr988Message[128];
 
     // The IDE doesn't count the else condition as use, so I need this hack to 
     // shut it up. 
@@ -410,7 +410,7 @@ char *RYLR988::getUID()
 
         String rsp=serialDevice->readString();
         rsp.toCharArray(buffer, 80);
-        Serial.println(buffer);
+        //Serial.println(buffer);
 
         //The message expected will be of the form: +UID=OF...0
         if(sscanf(buffer, "%5s%s", cmd, uid) != 2) {
